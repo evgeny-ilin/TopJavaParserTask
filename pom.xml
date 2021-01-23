@@ -28,7 +28,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                parser.Main
+                                Main
                             </mainClass>
                         </manifest>
                     </archive>
