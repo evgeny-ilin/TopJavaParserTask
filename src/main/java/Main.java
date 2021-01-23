@@ -8,8 +8,7 @@ public class Main {
     public static final String[] PARSE_ITEMS = {"address", "city", "email", "firstName", "lastName", "phone"};
     public static final String[] INPUT_ITEMS = {"url", "start", "end", "timeout"};
     public static String url;
-    public static int start, end;
-    public static long timeout;
+    public static int start, end, timeout;
 
     public static void main(String[] args) {
         try {
