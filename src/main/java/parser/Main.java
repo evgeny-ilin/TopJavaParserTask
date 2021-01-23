@@ -27,7 +27,7 @@ public class Main {
                 Thread.sleep(timeout);
             }
         } catch (Exception e) {
-            System.out.println("Something gets wrong: {}".formatted(e.toString()));
+            System.out.printf("Something gets wrong: {}%n", e.toString());
         }
     }
 
@@ -47,14 +47,16 @@ public class Main {
             params = Arrays.copyOf(args, args.length);
         }
 
-        if (params[3].isEmpty()) {
-            params[3] = "500";
-        }
-
         url = params[0];
         start = Integer.parseInt(params[1]);
         end = Integer.parseInt(params[2]);
-        timeout = Integer.parseInt(params[3]);
+
+        if (params.length < 4) {
+            timeout = 500;
+        } else {
+            timeout = Integer.parseInt(params[3]);
+        }
+
 
         ValidationUtil.checkParams();
     }
